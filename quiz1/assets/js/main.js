@@ -1,4 +1,4 @@
-import { animateMapMarkers, initImageLoad, initReveal, initScrollEffects, initSmoothScroll } from "./motion.js";
+import { animateMapMarkers, initImageLoad, initReveal, initScrollEffects, initSmoothScroll } from "./motion.js?v=20260930";
 
 const BASE = "/quiz1";
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
