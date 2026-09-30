@@ -2,11 +2,11 @@
 
 Website pribadi statis untuk Quiz 1 EF234301 Pemrograman Web (D), Institut Teknologi Sepuluh Nopember, 2026. Berisi profil pemilik dan catatan tentang Kota Malang: sejarah, kuliner, dan tempat wisatanya.
 
-Dibuat oleh Faeyzar Ahnaf Musyarri (5025251117).
+Dibuat oleh Faeyzar Ahnaf Musyarri NRP 5025251117.
 
 ## Halaman
 
-Website ini berupa satu halaman (one-page) dengan URL terpisah untuk tiap section:
+Website ini berupa satu halaman dengan URL terpisah untuk tiap section:
 
 | URL | Section |
 |---|---|
@@ -17,15 +17,6 @@ Website ini berupa satu halaman (one-page) dengan URL terpisah untuk tiap sectio
 | `/quiz1/tourist` | Wisata |
 
 Semua alamat di bawah `/quiz1/` dilayani oleh `quiz1/index.html` lewat aturan rewrite di `_redirects` (Netlify). Router JavaScript di `quiz1/assets/js/main.js` membaca alamat itu lalu menggulir ke section yang sesuai.
-
-## Teknologi
-
-- HTML, CSS, dan JavaScript tanpa framework
-- [Leaflet](https://leafletjs.com/) 1.9.4 untuk peta (disimpan lokal di `quiz1/assets/vendor/leaflet/`)
-- Tile peta CARTO `light_nolabels`, data © OpenStreetMap contributors
-- [Lenis](https://github.com/darkroomengineering/lenis) 1.3.26 untuk scroll berinersia (disimpan lokal di `quiz1/assets/vendor/lenis/`)
-- Huruf Fraunces dan Instrument Sans (Google Fonts)
-- Hosting Netlify
 
 ## Struktur sumber HTML
 
@@ -47,17 +38,9 @@ Netlify menjalankan perintah yang sama saat deploy (lihat `netlify.toml`).
 
 ## Menjalankan di komputer sendiri
 
-Server lokal biasa tidak menjalankan `_redirects`, sehingga URL seperti `/quiz1/food` hanya bisa dibuka langsung lewat Netlify CLI:
-
 ```bash
 npx netlify-cli dev
 ```
-
-Dengan server biasa (misalnya Live Server), buka `/quiz1/` lalu pindah section lewat menu.
-
-## Dokumen
-
-Dokumen perencanaan (SDLC) ada di folder `docs/`: PRD, arsitektur, backend/hosting, desain, dan aturan penulisan kode.
 
 ## Sumber data
 
@@ -74,4 +57,3 @@ Dokumen perencanaan (SDLC) ada di folder `docs/`: PRD, arsitektur, backend/hosti
 | Coban Rondo | [Salsa Wisata: Coban Rondo 2026](https://salsawisata.com/air-terjun-coban-rondo/), [Trip.com](https://us.trip.com/travel-guide/attraction/pujon/coban-rondo-waterfall-pujon-61237122/) |
 | Gunung Bromo | [Desk Jabar: Harga Tiket Masuk Bromo 2026](https://deskjabar.pikiran-rakyat.com/gaya-hidup/pr-11310238757/harga-tiket-masuk-bromo-2026-terbaru-rincian-lengkap-untuk-wisatawan-lokal-dan-asing?page=all), [Bigtravelindo: Tiket Bromo 2026](https://bigtravelindo.com/harga-tiket-masuk-bromo-terbaru-2026/) |
 
-Jam buka dan harga tiket dapat berubah sewaktu-waktu.
