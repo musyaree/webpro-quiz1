@@ -1,4 +1,4 @@
-@layer tokens, base, layout, components, sections, motion;
+@layer tokens, base, layout, components, sections, motion, i18n;
 
 /* ------------------------------------------------------------------ */
 @layer tokens {
@@ -244,6 +244,45 @@
     text-decoration: none;
   }
 
+  /* Tombol ganti bahasa: dua kode bahasa, yang aktif berwarna hijau dan bergaris bawah. */
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    min-height: 44px;
+    margin-left: auto;
+    padding: 0 var(--s-3);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: var(--fs-label);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color 150ms ease-out;
+  }
+
+  .lang-toggle:hover {
+    border-color: var(--ink);
+  }
+
+  .lang-toggle__sep {
+    color: var(--rule);
+  }
+
+  html[lang="id"] .lang-toggle__opt--id,
+  html[lang="en"] .lang-toggle__opt--en {
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .lang-toggle + .nav-toggle {
+    margin-left: 0;
+  }
+
   .masthead__edition {
     font-size: var(--fs-caption);
     color: var(--muted);
@@ -335,6 +374,11 @@
     .masthead__edition,
     .nav-toggle {
       display: none;
+    }
+
+    .lang-toggle {
+      order: 3;
+      margin-left: var(--s-5);
     }
 
     .site-nav,
@@ -1049,8 +1093,9 @@
     max-width: 68ch;
   }
 
-  .history__text p + p {
-    margin-top: var(--s-4);
+  /* Jarak bawah, bukan "p + p": paragraf bahasa yang disembunyikan tetap dihitung sebagai saudara. */
+  .history__text p:not(:last-child) {
+    margin-bottom: var(--s-4);
   }
 
   .history__era {
@@ -1724,5 +1769,15 @@
       transition-delay: 0ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Dua bahasa: hanya versi yang sesuai atribut lang pada <html> yang tampil.
+   Layer terakhir agar menang atas aturan display di layer lain tanpa !important. */
+@layer i18n {
+  html[lang="id"] [lang="en"],
+  html[lang="en"] [lang="id"] {
+    display: none;
   }
 }

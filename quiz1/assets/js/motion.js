@@ -22,19 +22,24 @@ export function initSmoothScroll() {
 // Teks tetap utuh di DOM sehingga pembaca layar membacanya seperti biasa.
 export function splitWords(root = document) {
   for (const heading of root.querySelectorAll("[data-split]")) {
-    const words = heading.textContent.trim().split(/\s+/);
-    heading.replaceChildren();
-    words.forEach((word, index) => {
-      const outer = document.createElement("span");
-      outer.className = "word";
-      const inner = document.createElement("span");
-      inner.className = "word__inner";
-      inner.style.setProperty("--i", index);
-      inner.textContent = word;
-      outer.append(inner);
-      heading.append(outer);
-      if (index < words.length - 1) heading.append(" ");
-    });
+    // Judul dua bahasa berisi <span lang="id"> dan <span lang="en">; masing-masing dipecah sendiri.
+    const parts = heading.querySelectorAll(":scope > [lang]");
+    const targets = parts.length ? [...parts] : [heading];
+    for (const target of targets) {
+      const words = target.textContent.trim().split(/\s+/);
+      target.replaceChildren();
+      words.forEach((word, index) => {
+        const outer = document.createElement("span");
+        outer.className = "word";
+        const inner = document.createElement("span");
+        inner.className = "word__inner";
+        inner.style.setProperty("--i", index);
+        inner.textContent = word;
+        outer.append(inner);
+        target.append(outer);
+        if (index < words.length - 1) target.append(" ");
+      });
+    }
   }
 }
 

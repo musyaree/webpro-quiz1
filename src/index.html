@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="/quiz1/assets/vendor/lenis/lenis.css">
   <link rel="stylesheet" href="/quiz1/assets/css/style.css">
   <script>
+    // Bahasa tersimpan dipasang sebelum render pertama agar teks tidak berganti setelah tampil.
+    try { var savedLang = localStorage.getItem("ngalam-lang"); if (savedLang === "en" || savedLang === "id") document.documentElement.lang = savedLang; } catch (e) {}
     // Dipasang sebelum render pertama agar animasi masuk hero tidak berkedip.
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-motion");
   </script>
@@ -26,7 +28,7 @@
   <script src="/quiz1/assets/js/main.js" type="module"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Lewati ke isi</a>
+  <a class="skip-link" href="#main"><span lang="id">Lewati ke isi</span><span lang="en">Skip to content</span></a>
 
   <!-- include: partials/header.html -->
 

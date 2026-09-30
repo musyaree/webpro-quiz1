@@ -1,17 +1,20 @@
 <header class="masthead">
   <div class="masthead__inner">
     <a class="masthead__title" href="/quiz1" data-section="home">Ngalam</a>
+    <button class="lang-toggle" type="button" data-lang-toggle aria-label="Ganti bahasa ke English">
+      <span class="lang-toggle__opt--id">ID</span><span class="lang-toggle__sep" aria-hidden="true">/</span><span class="lang-toggle__opt--en">EN</span>
+    </button>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Buka menu">
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
     </button>
-    <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
-      <a class="site-nav__link" href="/quiz1" data-section="home">Beranda</a>
-      <a class="site-nav__link" href="/quiz1/profile" data-section="profile">Profil</a>
-      <a class="site-nav__link" href="/quiz1/hometown" data-section="hometown">Kota</a>
-      <a class="site-nav__link" href="/quiz1/food" data-section="food">Kuliner</a>
-      <a class="site-nav__link" href="/quiz1/tourist" data-section="tourist">Wisata</a>
+    <nav class="site-nav" id="site-nav" aria-label="Navigasi utama" data-en-aria-label="Main navigation">
+      <a class="site-nav__link" href="/quiz1" data-section="home"><span lang="id">Beranda</span><span lang="en">Home</span></a>
+      <a class="site-nav__link" href="/quiz1/profile" data-section="profile"><span lang="id">Profil</span><span lang="en">Profile</span></a>
+      <a class="site-nav__link" href="/quiz1/hometown" data-section="hometown"><span lang="id">Kota</span><span lang="en">Hometown</span></a>
+      <a class="site-nav__link" href="/quiz1/food" data-section="food"><span lang="id">Kuliner</span><span lang="en">Food</span></a>
+      <a class="site-nav__link" href="/quiz1/tourist" data-section="tourist"><span lang="id">Wisata</span><span lang="en">Places</span></a>
     </nav>
   </div>
   <span class="masthead__progress" aria-hidden="true"></span>

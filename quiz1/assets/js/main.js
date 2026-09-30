@@ -4,6 +4,14 @@ const BASE = "/quiz1";
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const lenis = initSmoothScroll();
 
+// Teks yang dibuat JavaScript, dalam dua bahasa.
+const TEXT = {
+  id: { openMenu: "Buka menu", closeMenu: "Tutup menu", mapError: "Peta tidak dapat dimuat.", switchLang: "Ganti bahasa ke English" },
+  en: { openMenu: "Open menu", closeMenu: "Close menu", mapError: "The map could not be loaded.", switchLang: "Switch language to Bahasa Indonesia" },
+};
+const currentLang = () => (document.documentElement.lang === "en" ? "en" : "id");
+const t = (key) => TEXT[currentLang()][key];
+
 const sections = [...document.querySelectorAll("[data-route]")];
 const routes = new Map(sections.map((section) => [section.dataset.route, section]));
 const navLinks = [...document.querySelectorAll(".site-nav__link")];
@@ -38,7 +46,8 @@ function setActiveNav(route) {
 
 function setDocumentState(route) {
   const section = routes.get(route);
-  document.title = section?.dataset.title ?? "Ngalam";
+  const title = currentLang() === "en" ? section?.dataset.titleEn : section?.dataset.title;
+  document.title = title ?? section?.dataset.title ?? "Ngalam";
   setActiveNav(route);
 }
 
@@ -183,7 +192,7 @@ const siteNav = document.querySelector(".site-nav");
 function closeNav() {
   if (!navToggle || navToggle.getAttribute("aria-expanded") !== "true") return;
   navToggle.setAttribute("aria-expanded", "false");
-  navToggle.setAttribute("aria-label", "Buka menu");
+  navToggle.setAttribute("aria-label", t("openMenu"));
   siteNav.classList.remove("is-open");
   lenis?.start();
 }
@@ -194,7 +203,7 @@ function initNavToggle() {
   navToggle.addEventListener("click", () => {
     const open = navToggle.getAttribute("aria-expanded") !== "true";
     navToggle.setAttribute("aria-expanded", String(open));
-    navToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+    navToggle.setAttribute("aria-label", open ? t("closeMenu") : t("openMenu"));
     siteNav.classList.toggle("is-open", open);
     if (open) lenis?.stop();
     else lenis?.start();
@@ -263,8 +272,9 @@ function initLightbox() {
     opener = trigger;
     const media = trigger.querySelector("[data-media], .ph, img");
     const place = trigger.closest(".place");
-    const name = place?.querySelector(".place__name")?.textContent ?? "";
-    const credit = trigger.closest("figure")?.querySelector(".caption")?.textContent ?? "";
+    // innerText hanya mengambil teks bahasa yang sedang tampil.
+    const name = place?.querySelector(".place__name")?.innerText.trim() ?? "";
+    const credit = trigger.closest("figure")?.querySelector(".caption")?.innerText.trim() ?? "";
 
     const copy = media.cloneNode(true);
     // Salinan di lightbox tidak ikut animasi tirai atau parallax.
@@ -305,9 +315,9 @@ function initLightbox() {
 }
 
 const MAP_POINTS = [
-  { name: "Malang", lat: -7.9797, lng: 112.6304, kind: "main" },
-  { name: "Coban Rondo", lat: -7.8847, lng: 112.4769, kind: "left" },
-  { name: "Gunung Bromo", lat: -7.9425, lng: 112.953, kind: "right" },
+  { name: { id: "Malang", en: "Malang" }, lat: -7.9797, lng: 112.6304, kind: "main" },
+  { name: { id: "Coban Rondo", en: "Coban Rondo" }, lat: -7.8847, lng: 112.4769, kind: "left" },
+  { name: { id: "Gunung Bromo", en: "Mount Bromo" }, lat: -7.9425, lng: 112.953, kind: "right" },
 ];
 
 // Zoom bilangan bulat: zoom pecahan membuat garis sambungan terlihat di antara tile.
@@ -338,7 +348,7 @@ function showMapError(container) {
   container.className = "map";
   const message = document.createElement("p");
   message.className = "map__fallback";
-  message.textContent = "Peta tidak dapat dimuat.";
+  message.innerHTML = `<span lang="id">${TEXT.id.mapError}</span><span lang="en">${TEXT.en.mapError}</span>`;
   container.append(message);
 }
 
@@ -391,7 +401,7 @@ function buildMap(L, container) {
   tiles.addTo(map);
 
   for (const point of MAP_POINTS) {
-    const html = `<span class="map-marker map-marker--${point.kind}"><span class="map-marker__dot"></span><span class="map-marker__label">${point.name}</span></span>`;
+    const html = `<span class="map-marker map-marker--${point.kind}"><span class="map-marker__dot"></span><span class="map-marker__label"><span lang="id">${point.name.id}</span><span lang="en">${point.name.en}</span></span></span>`;
     L.marker([point.lat, point.lng], {
       icon: L.divIcon({ className: "map-marker-icon", html, iconSize: [0, 0], iconAnchor: [0, 0] }),
       keyboard: false,
@@ -438,7 +448,50 @@ function initMap() {
   observer.observe(container);
 }
 
+const LANG_KEY = "ngalam-lang";
+const I18N_ATTRS = ["alt", "aria-label"];
+
+// Menukar atribut yang punya versi Inggris (data-en-alt, data-en-aria-label).
+// Versi Indonesia disimpan sekali di data-id-* agar bisa dikembalikan.
+function applyAttributes(lang) {
+  for (const attr of I18N_ATTRS) {
+    for (const el of document.querySelectorAll(`[data-en-${attr}]`)) {
+      const saved = `data-id-${attr}`;
+      if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr) ?? "");
+      el.setAttribute(attr, lang === "en" ? el.getAttribute(`data-en-${attr}`) : el.getAttribute(saved));
+    }
+  }
+}
+
+function setLanguage(lang, { save = true } = {}) {
+  document.documentElement.lang = lang;
+  applyAttributes(lang);
+  const toggle = document.querySelector("[data-lang-toggle]");
+  toggle?.setAttribute("aria-label", t("switchLang"));
+  if (navToggle) {
+    navToggle.setAttribute("aria-label", navToggle.getAttribute("aria-expanded") === "true" ? t("closeMenu") : t("openMenu"));
+  }
+  setDocumentState(routeFromPath(location.pathname));
+  if (save) {
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch {
+      // Penyimpanan diblokir (mode privat): pilihan bahasa hanya berlaku di halaman ini.
+    }
+  }
+}
+
+function initLanguage() {
+  const toggle = document.querySelector("[data-lang-toggle]");
+  // Bahasa awal sudah dipasang skrip di <head>; di sini tinggal menyelaraskan atribut dan label.
+  setLanguage(currentLang(), { save: false });
+  toggle?.addEventListener("click", () => {
+    setLanguage(currentLang() === "en" ? "id" : "en");
+  });
+}
+
 initNavToggle();
+initLanguage();
 initRouter();
 initScrollSpy();
 initReveal();
