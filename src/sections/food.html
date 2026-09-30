@@ -1,0 +1,114 @@
+<!-- Kuliner -->
+<section class="section food" id="food" data-route="food" data-title="Kuliner · Ngalam" aria-labelledby="food-title">
+  <div class="container">
+    <header class="section-head" data-reveal="head">
+      <p class="section-head__label">03 / Kuliner</p>
+      <h2 class="section-head__title" id="food-title" tabindex="-1" data-split>Kuliner Khas Malang</h2>
+    </header>
+
+    <div class="food__bar">
+      <p class="food__intro">Harga tidak dicantumkan karena berbeda di setiap tempat dan dapat berubah sewaktu-waktu.</p>
+      <div class="filter" role="group" aria-label="Filter kategori kuliner" data-filter>
+        <button class="filter__button" type="button" data-filter-value="all" aria-pressed="true">Semua</button>
+        <button class="filter__button" type="button" data-filter-value="berat" aria-pressed="false">Makanan berat</button>
+        <button class="filter__button" type="button" data-filter-value="jajanan" aria-pressed="false">Jajanan</button>
+        <button class="filter__button" type="button" data-filter-value="minuman" aria-pressed="false">Minuman</button>
+      </div>
+    </div>
+
+    <p class="food__empty" data-filter-empty hidden>Belum ada menu di kategori ini. Pilih "Semua" untuk melihat seluruh menu. <button class="text-button" type="button" data-filter-reset>Tampilkan semua</button></p>
+
+    <!-- TODO: tautan Google Maps masih menuju halaman awal Google Maps; ganti dengan tautan lokasi warung masing-masing. -->
+    <div class="food__list" aria-live="polite">
+      <article class="food-item food-item--featured" data-category="berat">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media data-parallax>
+            <img src="/quiz1/assets/img/cwie-mie-856.webp" srcset="/quiz1/assets/img/cwie-mie-480.webp 480w, /quiz1/assets/img/cwie-mie-856.webp 856w" sizes="(min-width: 1024px) 60vw, (min-width: 640px) 40vw, 100vw" width="856" height="642" alt="Semangkuk cwie mie dengan ayam cincang halus, pangsit goreng, dan sawi hijau" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: <a href="https://www.unileverfoodsolutions.co.id/id/recipe/cwie-mie-khas-malang-enak-dan-komplet-R90027290.html" target="_blank" rel="noopener">Unilever Food Solutions</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Makanan berat</p>
+          <h3 class="food-item__name">Cwie Mie</h3>
+          <p>Mi tipis dengan taburan ayam cincang halus, selada, dan pangsit goreng. Hidangan ini mendapat pengaruh dari masakan Tionghoa, dengan kuah yang ringan dan cenderung asin.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Cwie Mie (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+
+      <article class="food-item" data-category="berat">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media>
+            <img src="/quiz1/assets/img/bakso-malang-960.webp" srcset="/quiz1/assets/img/bakso-malang-480.webp 480w, /quiz1/assets/img/bakso-malang-960.webp 960w" sizes="(min-width: 640px) 40vw, 100vw" width="960" height="720" alt="Semangkuk bakso Malang berkuah kaldu dengan pentol, pangsit goreng, siomay, dan taburan daun bawang" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: <a href="https://jatimnow.com/baca-50867-rekomendasi-bakso-di-malang-yang-wajib-dicoba-dijamin-lidahmu-bergoyang" target="_blank" rel="noopener">jatimnow.com</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Makanan berat</p>
+          <h3 class="food-item__name">Bakso Malang</h3>
+          <p>Satu porsi dapat berisi bakso halus, bakso urat, tahu, siomay, pangsit goreng, dan pangsit rebus, disajikan dengan kuah kaldu sapi. Pembeli umumnya memilih sendiri isiannya.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Bakso Malang (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+
+      <article class="food-item food-item--reverse" data-category="berat">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media="right">
+            <img src="/quiz1/assets/img/orem-orem-533.webp" srcset="/quiz1/assets/img/orem-orem-400.webp 400w, /quiz1/assets/img/orem-orem-533.webp 533w" sizes="(min-width: 640px) 40vw, 100vw" width="533" height="400" alt="Sepiring orem-orem: potongan tempe dan suwiran ayam dalam kuah santan kuning, dengan dua belahan telur asin" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: Anom Harya, via <a href="https://indiekraf.com/orem-orem-hidangan-khas-malang-yang-tidak-banyak-diketahui-orang-kok-bisa/" target="_blank" rel="noopener">indiekraf.com</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Makanan berat</p>
+          <h3 class="food-item__name">Orem-Orem</h3>
+          <p>Tempe goreng dan suwiran ayam dalam kuah santan kuning berbumbu kunyit dan serai, disajikan dengan ketupat. Umumnya dijual untuk sarapan dan makan siang.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Orem-Orem (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+
+      <article class="food-item" data-category="berat">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media>
+            <img src="/quiz1/assets/img/sego-resek-667.webp" srcset="/quiz1/assets/img/sego-resek-480.webp 480w, /quiz1/assets/img/sego-resek-667.webp 667w" sizes="(min-width: 640px) 40vw, 100vw" width="667" height="500" alt="Sego resek di atas kertas nasi: nasi goreng dengan suwiran ayam, telur asin, dan bawang goreng" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: <a href="https://hiling.indozone.id/food/941259965/nikmatnya-sego-resek-nasi-sampah-legendaris-yang-jadi-favorit-di-kota-malang" target="_blank" rel="noopener">Indozone</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Makanan berat</p>
+          <h3 class="food-item__name">Sego Resek</h3>
+          <p>Nasi goreng yang dicampur mi, sayuran, dan daging, lalu dimasak di atas tungku kayu bakar sehingga beraroma asap. Penjualnya umumnya buka pada malam hari.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Sego Resek (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+
+      <article class="food-item food-item--reverse" data-category="jajanan">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media="right">
+            <img src="/quiz1/assets/img/puthu-lanang-960.webp" srcset="/quiz1/assets/img/puthu-lanang-480.webp 480w, /quiz1/assets/img/puthu-lanang-960.webp 960w" sizes="(min-width: 640px) 40vw, 100vw" width="960" height="720" alt="Deretan tabung bambu berisi puthu yang baru dikukus di atas dandang, ditaburi kelapa parut, sementara penjual menyiapkan pesanan" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: <a href="https://www.kompas.com/food/read/2023/06/08/180200775/puthu-lanang-jajanan-legendaris-di-malang-langganan-presiden?page=all" target="_blank" rel="noopener">Kompas.com</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Jajanan</p>
+          <h3 class="food-item__name">Puthu Lanang</h3>
+          <p>Kue tepung beras berisi gula merah yang dikukus dalam tabung bambu, kemudian disajikan dengan kelapa parut.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Puthu Lanang (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+
+      <article class="food-item" data-category="minuman">
+        <figure class="food-item__photo">
+          <div class="media media--food" data-media>
+            <img src="/quiz1/assets/img/angsle-948.webp" srcset="/quiz1/assets/img/angsle-480.webp 480w, /quiz1/assets/img/angsle-948.webp 948w" sizes="(min-width: 640px) 40vw, 100vw" width="948" height="711" alt="Semangkuk angsle berkuah santan dengan petulo merah muda dan hijau, ketan, kacang hijau, potongan roti, dan kolang-kaling merah, dihias daun pandan" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="caption">Foto: <a href="https://wisata.viva.co.id/wisata/22097-angsle-malang-kuliner-hangat-manis-gurih-beraroma-pandan-yang-disukai-sheila-on-7" target="_blank" rel="noopener">VIVA Wisata</a></figcaption>
+        </figure>
+        <div class="food-item__body">
+          <p class="food-item__category">Minuman</p>
+          <h3 class="food-item__name">Angsle</h3>
+          <p>Minuman hangat berkuah santan dengan isian petulo, ketan, kacang hijau, dan kolang-kaling.</p>
+          <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Angsle (membuka tab baru)</span></a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

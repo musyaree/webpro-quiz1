@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- Dibuat otomatis oleh build.js dari folder src/. Jangan edit file ini langsung. -->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ngalam</title>
+  <meta name="description" content="Website pribadi yang berisi profil saya dan catatan tentang Kota Malang: sejarah, kuliner, dan tempat wisatanya.">
+  <meta name="theme-color" content="#F1F1F1">
+  <meta property="og:title" content="Ngalam">
+  <meta property="og:description" content="Website pribadi yang berisi profil saya dan catatan tentang Kota Malang: sejarah, kuliner, dan tempat wisatanya.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/quiz1/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/quiz1/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/quiz1/assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="/quiz1/assets/img/tugu-malang-1600.webp" imagesrcset="/quiz1/assets/img/tugu-malang-800.webp 800w, /quiz1/assets/img/tugu-malang-1200.webp 1200w, /quiz1/assets/img/tugu-malang-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="/quiz1/assets/vendor/lenis/lenis.css">
+  <link rel="stylesheet" href="/quiz1/assets/css/style.css">
+  <script>
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-motion");
+  </script>
+  <script src="/quiz1/assets/js/config.js"></script>
+  <script src="/quiz1/assets/js/main.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke isi</a>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="masthead__title" href="/quiz1" data-section="home">Ngalam</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Buka menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+        <a class="site-nav__link" href="/quiz1" data-section="home">Beranda</a>
+        <a class="site-nav__link" href="/quiz1/profile" data-section="profile">Profil</a>
+        <a class="site-nav__link" href="/quiz1/hometown" data-section="hometown">Kota</a>
+        <a class="site-nav__link" href="/quiz1/food" data-section="food">Kuliner</a>
+        <a class="site-nav__link" href="/quiz1/tourist" data-section="tourist">Wisata</a>
+      </nav>
+    </div>
+    <span class="masthead__progress" aria-hidden="true"></span>
+  </header>
+
+  <main id="main">
+    <!-- Beranda -->
+    <section class="hero" id="home" data-route="" data-title="Ngalam" aria-labelledby="home-title">
+      <div class="hero__media">
+        <img class="hero__img" src="/quiz1/assets/img/tugu-malang-1600.webp" srcset="/quiz1/assets/img/tugu-malang-800.webp 800w, /quiz1/assets/img/tugu-malang-1200.webp 1200w, /quiz1/assets/img/tugu-malang-1600.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Monumen Tugu di tengah kolam teratai Alun-Alun Tugu, dengan Balai Kota Malang di belakangnya" fetchpriority="high">
+      </div>
+      <div class="hero__content container">
+        <h1 class="hero__title" id="home-title" tabindex="-1">Ngalam Kipa Ilakes</h1>
+        <p class="hero__lead">Website pribadi yang berisi profil saya dan catatan tentang Kota Malang: sejarah, kuliner, dan tempat wisatanya.</p>
+        <a class="button button--primary" href="/quiz1/profile">Lihat Profil</a>
+      </div>
+    </section>
+
+    <!-- Profil -->
+    <section class="section profile" id="profile" data-route="profile" data-title="Profil · Ngalam" aria-labelledby="profile-title">
+      <div class="container">
+        <header class="section-head" data-reveal="head">
+          <p class="section-head__label">01 / Profil</p>
+          <h2 class="section-head__title" id="profile-title" tabindex="-1" data-split>Profil</h2>
+        </header>
+
+        <div class="profile__grid">
+          <figure class="profile__photo">
+            <div class="media media--portrait" data-media>
+              <img src="/quiz1/assets/img/profil-faeyzar-800.webp" srcset="/quiz1/assets/img/profil-faeyzar-480.webp 480w, /quiz1/assets/img/profil-faeyzar-800.webp 800w" sizes="(min-width: 1024px) 30vw, 60vw" width="800" height="1000" alt="Faeyzar Ahnaf Musyarri, berkacamata dan berkemeja biru dongker, berdiri bersedekap" loading="lazy" decoding="async">
+            </div>
+          </figure>
+
+          <div class="profile__body">
+            <h3 class="profile__name">Faeyzar Ahnaf Musyarri</h3>
+            <p class="profile__meta">NRP 5025251117 · Teknik Informatika, Institut Teknologi Sepuluh Nopember</p>
+            <p class="profile__intro">Saya mahasiswa Teknik Informatika ITS angkatan 2025 dan lulusan SMAN 8 Malang. Bahasa pemrograman yang saya gunakan antara lain Python, C/C++, dan React. Minat utama saya ada di robotika dan IoT.</p>
+
+            <div class="profile__details">
+              <div class="profile__block">
+                <h4 class="sublabel">Pendidikan</h4>
+                <ol class="timeline">
+                  <li class="timeline__item">
+                    <span class="timeline__year">2025–sekarang</span>
+                    <span class="timeline__place">Institut Teknologi Sepuluh Nopember</span>
+                    <span class="timeline__note">S1 Teknik Informatika</span>
+                  </li>
+                  <li class="timeline__item">
+                    <span class="timeline__year">2022–2025</span>
+                    <span class="timeline__place">SMAN 8 Malang</span>
+                    <span class="timeline__note">MIPA</span>
+                  </li>
+                </ol>
+              </div>
+              <div class="profile__block">
+                <h4 class="sublabel">Keahlian</h4>
+                <p class="inline-list">Python · C/C++ · React JS</p>
+                <h4 class="sublabel">Minat</h4>
+                <p class="inline-list">Robotika · Internet of Things · Pengembangan perangkat lunak · Pemrograman</p>
+              </div>
+            </div>
+
+            <div class="profile__contact">
+              <h4 class="sublabel">Kontak</h4>
+              <ul class="contact-list">
+                <li>
+                  <a class="contact-link" href="https://www.linkedin.com/in/faeyzarahnaf/" target="_blank" rel="noopener">
+                    <span class="contact-link__icon">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </span>
+                    <span class="contact-link__label">LinkedIn</span>
+                    <span class="visually-hidden">(membuka tab baru)</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="mailto:musyareee07@gmail.com">
+                    <span class="contact-link__icon">
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="2.5" y="4.75" width="19" height="14.5" rx="1"/><path d="M3 5.5l9 7.25 9-7.25"/></g></svg>
+                    </span>
+                    <span class="contact-link__label">Email</span>
+                    <span class="visually-hidden">musyareee07@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="https://github.com/musyaree" target="_blank" rel="noopener">
+                    <span class="contact-link__icon">
+                      <svg viewBox="0 0 16 16" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                    </span>
+                    <span class="contact-link__label">GitHub</span>
+                    <span class="visually-hidden">(membuka tab baru)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kota -->
+    <section class="section hometown" id="hometown" data-route="hometown" data-title="Kota · Ngalam" aria-labelledby="hometown-title">
+      <div class="container">
+        <header class="section-head" data-reveal="head">
+          <p class="section-head__label">02 / Kota</p>
+          <h2 class="section-head__title" id="hometown-title" tabindex="-1" data-split>Malang</h2>
+          <p class="section-head__lead">Kota di dataran tinggi Jawa Timur, pada ketinggian 440–667 meter di atas permukaan laut.</p>
+        </header>
+
+        <figure class="map-figure">
+          <div class="map" id="map" data-map role="img" aria-label="Peta Jawa Timur yang menandai Kota Malang, Air Terjun Coban Rondo, dan Gunung Bromo">
+            <p class="map__fallback">Peta: Kota Malang, Coban Rondo, dan Gunung Bromo di Jawa Timur.</p>
+          </div>
+          <figcaption class="map-figure__caption">
+            <span>Letak Kota Malang, Coban Rondo, dan Gunung Bromo di Jawa Timur.</span>
+            <span class="map-figure__meta">
+              <span class="map-figure__coords">7°58′ LS / 112°37′ BT</span>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Kota+Malang" target="_blank" rel="noopener">Buka di Google Maps</a>
+            </span>
+          </figcaption>
+        </figure>
+
+        <div class="history">
+          <div class="history__text">
+            <h3 class="history__title">Sejarah Singkat</h3>
+            <p class="dropcap">Salah satu catatan tertua tentang wilayah Malang berasal dari Prasasti Dinoyo, yang ditulis pada pertengahan abad ke-8 dengan aksara Kawi dan bahasa Sanskerta. Prasasti ini menyebut Kerajaan Kanjuruhan beserta rajanya, Gajayana. Prasasti bertarikh 682 Saka ini, atau 28 November 760, kini dipakai sebagai dasar hari jadi Kabupaten Malang.</p>
+
+            <h4 class="sublabel history__era">1222–1292 · Singhasari</h4>
+            <p>Sekitar lima abad kemudian, wilayah ini menjadi pusat Kerajaan Tumapel. Ken Arok mendirikannya pada 1222 setelah mengalahkan Kediri dalam pertempuran di Ganter. Pada 1254 Raja Wisnuwardhana menamai ibu kotanya Singhasari, nama yang kini bertahan sebagai Kecamatan Singosari di utara Kota Malang. Kerajaan ini mencapai puncaknya di bawah Kertanegara sebelum runtuh pada 1292.</p>
+
+            <h4 class="sublabel history__era">1614–1879 · Mataram dan Belanda</h4>
+            <p>Pada 1614 pasukan Mataram di bawah Tumenggung Alap-Alap menduduki Malang dan menangkap penguasa setempat, Rangga Tohjiwa. VOC masuk ke Malang pada 1767. Jalur kereta api yang mulai beroperasi pada 1879 kemudian mempercepat pertumbuhan kota.</p>
+
+            <h4 class="sublabel history__era">1914–1935 · Kota praja</h4>
+            <p>Pada 1 April 1914, pemerintah Hindia Belanda menetapkan Malang sebagai <em>gemeente</em> (kota praja), dan tanggal tersebut kini diperingati sebagai hari jadi Kota Malang. Wali kota pertamanya, H.I. Bussemaker, mulai menjabat pada 1 Juli 1919. Kota ini ditata bertahap melalui delapan rencana perluasan (<em>bouwplan</em>) sejak 1917, termasuk kawasan Ijen Boulevard rancangan Thomas Karsten: jalan kembar yang dipisahkan taman dan diapit pohon palem, dibangun mulai 1935.</p>
+
+            <h4 class="sublabel history__era">1942–1947 · Pendudukan dan bumi hangus</h4>
+            <p>Jepang menduduki Malang pada Maret 1942. Setelah kemerdekaan, Belanda melancarkan Agresi Militer I pada 21 Juli 1947. Karena persenjataan terbatas, para pejuang memilih strategi bumi hangus: mulai 22 Juli, fasilitas penting dikosongkan lalu dibakar agar tidak dimanfaatkan Belanda, dan hampir seribu bangunan terbakar. Belanda akhirnya menguasai Malang pada 31 Juli 1947.</p>
+          </div>
+          <figure class="history__photo">
+            <div class="media media--portrait" data-media data-parallax>
+              <img src="/quiz1/assets/img/prasasti-dinoyo-800.webp" srcset="/quiz1/assets/img/prasasti-dinoyo-480.webp 480w, /quiz1/assets/img/prasasti-dinoyo-800.webp 800w" sizes="(min-width: 1024px) 40vw, 100vw" width="800" height="1000" alt="Prasasti Dinoyo, batu cokelat berukir aksara Kawi, dipajang dalam lemari kaca museum" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="caption">Prasasti Dinoyo di Museum Nasional Indonesia (D.113). Foto: Sastrawan, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.id" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://id.wikipedia.org/wiki/Prasasti_Dinoyo" target="_blank" rel="noopener">Wikipedia</a> (dipotong).</figcaption>
+          </figure>
+        </div>
+
+        <figure class="motto">
+          <div class="media motto__emblem" data-media>
+            <img src="/quiz1/assets/img/lambang-malang-180.webp" srcset="/quiz1/assets/img/lambang-malang-180.webp 1x, /quiz1/assets/img/lambang-malang-360.webp 2x" width="180" height="180" alt="Lambang Kota Malang: perisai segi lima berbingkai merah putih, bintang kuning dan Tugu biru di atas latar hijau, dengan pita bertuliskan Malang Kuçeçwara" loading="lazy" decoding="async">
+          </div>
+          <blockquote class="motto__quote"><p>“Malang Kuçeçwara”</p></blockquote>
+          <figcaption class="motto__caption">Semboyan Kota Malang yang berarti <em>Tuhan menghancurkan yang batil.</em></figcaption>
+        </figure>
+
+        <div class="culture">
+          <div>
+            <h3 class="sublabel">Boso Walikan &amp; Arema</h3>
+            <p>Warga Malang memiliki bahasa gaul khas bernama <em>boso walikan</em>, yang membalik urutan huruf sebuah kata: Malang menjadi Ngalam, arek menjadi kera. Nama website ini diambil dari bahasa tersebut. Warga kota juga dikenal dengan sebutan Arema, singkatan dari <em>arek Malang</em>, sedangkan julukan lama kotanya adalah <em>Paris van Oost-Java</em>.</p>
+          </div>
+          <div>
+            <h3 class="sublabel">Topeng Malangan</h3>
+            <p>Topeng Malangan masih dibuat dan dipentaskan hingga kini. Setiap warnanya memiliki makna: putih melambangkan kesucian, hijau kedamaian, kuning kemuliaan, dan merah amarah. Warna hijau dan kuning dari topeng inilah yang menjadi warna utama website ini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kuliner -->
+    <section class="section food" id="food" data-route="food" data-title="Kuliner · Ngalam" aria-labelledby="food-title">
+      <div class="container">
+        <header class="section-head" data-reveal="head">
+          <p class="section-head__label">03 / Kuliner</p>
+          <h2 class="section-head__title" id="food-title" tabindex="-1" data-split>Kuliner Khas Malang</h2>
+        </header>
+
+        <div class="food__bar">
+          <p class="food__intro">Harga tidak dicantumkan karena berbeda di setiap tempat dan dapat berubah sewaktu-waktu.</p>
+          <div class="filter" role="group" aria-label="Filter kategori kuliner" data-filter>
+            <button class="filter__button" type="button" data-filter-value="all" aria-pressed="true">Semua</button>
+            <button class="filter__button" type="button" data-filter-value="berat" aria-pressed="false">Makanan berat</button>
+            <button class="filter__button" type="button" data-filter-value="jajanan" aria-pressed="false">Jajanan</button>
+            <button class="filter__button" type="button" data-filter-value="minuman" aria-pressed="false">Minuman</button>
+          </div>
+        </div>
+
+        <p class="food__empty" data-filter-empty hidden>Belum ada menu di kategori ini. Pilih "Semua" untuk melihat seluruh menu. <button class="text-button" type="button" data-filter-reset>Tampilkan semua</button></p>
+
+        <!-- TODO: tautan Google Maps masih menuju halaman awal Google Maps; ganti dengan tautan lokasi warung masing-masing. -->
+        <div class="food__list" aria-live="polite">
+          <article class="food-item food-item--featured" data-category="berat">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media data-parallax>
+                <img src="/quiz1/assets/img/cwie-mie-856.webp" srcset="/quiz1/assets/img/cwie-mie-480.webp 480w, /quiz1/assets/img/cwie-mie-856.webp 856w" sizes="(min-width: 1024px) 60vw, (min-width: 640px) 40vw, 100vw" width="856" height="642" alt="Semangkuk cwie mie dengan ayam cincang halus, pangsit goreng, dan sawi hijau" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: <a href="https://www.unileverfoodsolutions.co.id/id/recipe/cwie-mie-khas-malang-enak-dan-komplet-R90027290.html" target="_blank" rel="noopener">Unilever Food Solutions</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Makanan berat</p>
+              <h3 class="food-item__name">Cwie Mie</h3>
+              <p>Mi tipis dengan taburan ayam cincang halus, selada, dan pangsit goreng. Hidangan ini mendapat pengaruh dari masakan Tionghoa, dengan kuah yang ringan dan cenderung asin.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Cwie Mie (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+
+          <article class="food-item" data-category="berat">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media>
+                <img src="/quiz1/assets/img/bakso-malang-960.webp" srcset="/quiz1/assets/img/bakso-malang-480.webp 480w, /quiz1/assets/img/bakso-malang-960.webp 960w" sizes="(min-width: 640px) 40vw, 100vw" width="960" height="720" alt="Semangkuk bakso Malang berkuah kaldu dengan pentol, pangsit goreng, siomay, dan taburan daun bawang" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: <a href="https://jatimnow.com/baca-50867-rekomendasi-bakso-di-malang-yang-wajib-dicoba-dijamin-lidahmu-bergoyang" target="_blank" rel="noopener">jatimnow.com</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Makanan berat</p>
+              <h3 class="food-item__name">Bakso Malang</h3>
+              <p>Satu porsi dapat berisi bakso halus, bakso urat, tahu, siomay, pangsit goreng, dan pangsit rebus, disajikan dengan kuah kaldu sapi. Pembeli umumnya memilih sendiri isiannya.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Bakso Malang (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+
+          <article class="food-item food-item--reverse" data-category="berat">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media="right">
+                <img src="/quiz1/assets/img/orem-orem-533.webp" srcset="/quiz1/assets/img/orem-orem-400.webp 400w, /quiz1/assets/img/orem-orem-533.webp 533w" sizes="(min-width: 640px) 40vw, 100vw" width="533" height="400" alt="Sepiring orem-orem: potongan tempe dan suwiran ayam dalam kuah santan kuning, dengan dua belahan telur asin" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: Anom Harya, via <a href="https://indiekraf.com/orem-orem-hidangan-khas-malang-yang-tidak-banyak-diketahui-orang-kok-bisa/" target="_blank" rel="noopener">indiekraf.com</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Makanan berat</p>
+              <h3 class="food-item__name">Orem-Orem</h3>
+              <p>Tempe goreng dan suwiran ayam dalam kuah santan kuning berbumbu kunyit dan serai, disajikan dengan ketupat. Umumnya dijual untuk sarapan dan makan siang.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Orem-Orem (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+
+          <article class="food-item" data-category="berat">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media>
+                <img src="/quiz1/assets/img/sego-resek-667.webp" srcset="/quiz1/assets/img/sego-resek-480.webp 480w, /quiz1/assets/img/sego-resek-667.webp 667w" sizes="(min-width: 640px) 40vw, 100vw" width="667" height="500" alt="Sego resek di atas kertas nasi: nasi goreng dengan suwiran ayam, telur asin, dan bawang goreng" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: <a href="https://hiling.indozone.id/food/941259965/nikmatnya-sego-resek-nasi-sampah-legendaris-yang-jadi-favorit-di-kota-malang" target="_blank" rel="noopener">Indozone</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Makanan berat</p>
+              <h3 class="food-item__name">Sego Resek</h3>
+              <p>Nasi goreng yang dicampur mi, sayuran, dan daging, lalu dimasak di atas tungku kayu bakar sehingga beraroma asap. Penjualnya umumnya buka pada malam hari.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Sego Resek (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+
+          <article class="food-item food-item--reverse" data-category="jajanan">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media="right">
+                <img src="/quiz1/assets/img/puthu-lanang-960.webp" srcset="/quiz1/assets/img/puthu-lanang-480.webp 480w, /quiz1/assets/img/puthu-lanang-960.webp 960w" sizes="(min-width: 640px) 40vw, 100vw" width="960" height="720" alt="Deretan tabung bambu berisi puthu yang baru dikukus di atas dandang, ditaburi kelapa parut, sementara penjual menyiapkan pesanan" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: <a href="https://www.kompas.com/food/read/2023/06/08/180200775/puthu-lanang-jajanan-legendaris-di-malang-langganan-presiden?page=all" target="_blank" rel="noopener">Kompas.com</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Jajanan</p>
+              <h3 class="food-item__name">Puthu Lanang</h3>
+              <p>Kue tepung beras berisi gula merah yang dikukus dalam tabung bambu, kemudian disajikan dengan kelapa parut.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Puthu Lanang (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+
+          <article class="food-item" data-category="minuman">
+            <figure class="food-item__photo">
+              <div class="media media--food" data-media>
+                <img src="/quiz1/assets/img/angsle-948.webp" srcset="/quiz1/assets/img/angsle-480.webp 480w, /quiz1/assets/img/angsle-948.webp 948w" sizes="(min-width: 640px) 40vw, 100vw" width="948" height="711" alt="Semangkuk angsle berkuah santan dengan petulo merah muda dan hijau, ketan, kacang hijau, potongan roti, dan kolang-kaling merah, dihias daun pandan" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="caption">Foto: <a href="https://wisata.viva.co.id/wisata/22097-angsle-malang-kuliner-hangat-manis-gurih-beraroma-pandan-yang-disukai-sheila-on-7" target="_blank" rel="noopener">VIVA Wisata</a></figcaption>
+            </figure>
+            <div class="food-item__body">
+              <p class="food-item__category">Minuman</p>
+              <h3 class="food-item__name">Angsle</h3>
+              <p>Minuman hangat berkuah santan dengan isian petulo, ketan, kacang hijau, dan kolang-kaling.</p>
+              <p class="food-item__where"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Angsle (membuka tab baru)</span></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wisata -->
+    <section class="section tourist" id="tourist" data-route="tourist" data-title="Wisata · Ngalam" aria-labelledby="tourist-title">
+      <div class="container">
+        <header class="section-head" data-reveal="head">
+          <p class="section-head__label">04 / Wisata</p>
+          <h2 class="section-head__title" id="tourist-title" tabindex="-1" data-split>Tempat Wisata</h2>
+          <p class="section-head__lead section-head__lead--muted">Informasi jam buka dan harga tiket berikut dihimpun dari sumber daring dan dapat berubah, sehingga sebaiknya diperiksa kembali sebelum berkunjung.</p>
+        </header>
+
+        <!-- TODO: tautan Google Maps masih menuju halaman awal Google Maps; ganti dengan tautan lokasi tiap tempat wisata. -->
+        <ol class="places">
+          <li class="place" data-reveal="stagger">
+            <span class="place__number" aria-hidden="true">01</span>
+            <div class="place__body">
+              <h3 class="place__name">Kayutangan Heritage</h3>
+              <p>Kawasan permukiman di pusat kota dengan deretan rumah bergaya kolonial, jengki, dan art deco, sebagian di antaranya sudah ada sejak 1920-an. Sejumlah warga membuka rumahnya bagi pengunjung dan memamerkan koleksi barang lama seperti radio kuno dan piringan hitam.</p>
+              <dl class="place__info">
+                <div><dt>Jam buka</dt><dd>setiap hari, 07.00–18.30 WIB</dd></div>
+                <div><dt>Tiket</dt><dd><span class="placeholder-text">Rp5.000–10.000</span></dd></div>
+              </dl>
+              <p class="place__map"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Kayutangan Heritage (membuka tab baru)</span></a></p>
+            </div>
+            <figure class="place__photo">
+              <button class="zoom" type="button" data-lightbox aria-label="Perbesar foto Kayutangan Heritage">
+                <span class="media media--landscape" data-media data-parallax><img src="/quiz1/assets/img/kayutangan-1125.webp" srcset="/quiz1/assets/img/kayutangan-600.webp 600w, /quiz1/assets/img/kayutangan-1125.webp 1125w" sizes="(min-width: 1024px) 40vw, 100vw" width="1125" height="750" alt="Gapura Kampoeng Heritage Kajoetangan bertuliskan nama kampung, dengan jalan berpaving motif dan pengunjung yang berjalan masuk" loading="lazy" decoding="async"></span>
+                <span class="zoom__hint" aria-hidden="true">Perbesar foto</span>
+              </button>
+              <figcaption class="caption">Foto: <a href="https://ketik.com/malang/daerah/long-weekend-mei-2026-kampung-kayutangan-heritage-malang-diserbu-16-ribu-wisatawan" target="_blank" rel="noopener">ketik.com</a></figcaption>
+            </figure>
+          </li>
+
+          <li class="place" data-reveal="stagger">
+            <span class="place__number" aria-hidden="true">02</span>
+            <div class="place__body">
+              <h3 class="place__name">Alun-Alun Tugu</h3>
+              <p>Taman berbentuk lingkaran di depan Balai Kota yang dirancang oleh Thomas Karsten pada 1920. Pembangunan monumen tugu di tengahnya dimulai pada 17 Agustus 1946, sempat hancur akibat Agresi Militer Belanda I pada 1947, lalu dibangun kembali dan diresmikan oleh Presiden Soekarno pada 1953. Puncak tugu berbentuk bambu runcing.</p>
+              <dl class="place__info">
+                <div><dt>Jam buka</dt><dd>taman publik</dd></div>
+                <div><dt>Tiket</dt><dd>gratis</dd></div>
+              </dl>
+              <p class="place__map"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Alun-Alun Tugu (membuka tab baru)</span></a></p>
+            </div>
+            <figure class="place__photo">
+              <button class="zoom" type="button" data-lightbox aria-label="Perbesar foto Alun-Alun Tugu">
+                <span class="media media--landscape" data-media data-parallax><img src="/quiz1/assets/img/alun-alun-tugu-592.webp" srcset="/quiz1/assets/img/alun-alun-tugu-480.webp 480w, /quiz1/assets/img/alun-alun-tugu-592.webp 592w" sizes="(min-width: 1024px) 40vw, 100vw" width="592" height="395" alt="Alun-Alun Tugu dilihat dari atas: kolam bundar dengan tugu di tengahnya, dikelilingi taman bunga merah, dan Balai Kota Malang di latar belakang" loading="lazy" decoding="async"></span>
+                <span class="zoom__hint" aria-hidden="true">Perbesar foto</span>
+              </button>
+              <figcaption class="caption">Foto: <a href="https://news.detik.com/foto-news/d-7356436/wajah-baru-alun-alun-tugu-malang" target="_blank" rel="noopener">detikcom</a></figcaption>
+            </figure>
+          </li>
+
+          <li class="place" data-reveal="stagger">
+            <span class="place__number" aria-hidden="true">03</span>
+            <div class="place__body">
+              <h3 class="place__name">Air Terjun Coban Rondo</h3>
+              <p>Air terjun di Kecamatan Pujon, Kabupaten Malang. Kata <em>rondo</em> berarti janda dalam bahasa Jawa dan merujuk pada legenda setempat. Harga tiket sudah mencakup akses ke Taman Labirin di kawasan yang sama.</p>
+              <dl class="place__info">
+                <div><dt>Jam buka</dt><dd>setiap hari, 07.00–17.00 WIB</dd></div>
+                <div><dt>Tiket</dt><dd>Rp35.000 hari biasa, Rp40.000 akhir pekan</dd></div>
+              </dl>
+              <p class="place__map"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Air Terjun Coban Rondo (membuka tab baru)</span></a></p>
+            </div>
+            <figure class="place__photo">
+              <button class="zoom" type="button" data-lightbox aria-label="Perbesar foto Air Terjun Coban Rondo">
+                <span class="media media--landscape" data-media data-parallax><img src="/quiz1/assets/img/coban-rondo-1200.webp" srcset="/quiz1/assets/img/coban-rondo-600.webp 600w, /quiz1/assets/img/coban-rondo-1200.webp 1200w" sizes="(min-width: 1024px) 40vw, 100vw" width="1200" height="800" alt="Air Terjun Coban Rondo jatuh dari tebing batu yang tinggi, dikelilingi hutan hijau lebat" loading="lazy" decoding="async"></span>
+                <span class="zoom__hint" aria-hidden="true">Perbesar foto</span>
+              </button>
+              <figcaption class="caption">Foto: Ivuvisual, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.id" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Air_Terjun_Coban_Rondo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+            </figure>
+          </li>
+
+          <li class="place" data-reveal="stagger">
+            <span class="place__number" aria-hidden="true">04</span>
+            <div class="place__body">
+              <h3 class="place__name">Gunung Bromo</h3>
+              <p>Gunung api aktif di kawasan Taman Nasional Bromo Tengger Semeru, dengan kawah yang dikelilingi lautan pasir. Sejak Oktober 2024, tiket masuk tidak lagi dijual di lokasi dan hanya dapat dibeli secara daring melalui situs resmi pengelola taman nasional.</p>
+              <dl class="place__info">
+                <div><dt>Jam buka</dt><dd></dd></div>
+                <div><dt>Tiket (WNI)</dt><dd>Rp54.000 hari kerja, Rp79.000 akhir pekan dan hari libur nasional</dd></div>
+                <div><dt>Pembelian tiket</dt><dd><a href="https://bromotenggersemeru.id/" target="_blank" rel="noopener">bromotenggersemeru.id</a></dd></div>
+              </dl>
+              <p class="place__map"><a class="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener"><span class="map-link__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span><span class="map-link__label">Lihat lokasi di Google Maps</span><span class="visually-hidden"> untuk Gunung Bromo (membuka tab baru)</span></a></p>
+            </div>
+            <figure class="place__photo">
+              <button class="zoom" type="button" data-lightbox aria-label="Perbesar foto Gunung Bromo">
+                <span class="media media--landscape" data-media data-parallax><img src="/quiz1/assets/img/gunung-bromo-1200.webp" srcset="/quiz1/assets/img/gunung-bromo-600.webp 600w, /quiz1/assets/img/gunung-bromo-1200.webp 1200w" sizes="(min-width: 1024px) 40vw, 100vw" width="1200" height="800" alt="Kawasan Bromo saat matahari terbit: kawah Gunung Bromo berasap, Gunung Batok di depannya, dan Gunung Semeru di kejauhan, dikelilingi lautan pasir berkabut" loading="lazy" decoding="async"></span>
+                <span class="zoom__hint" aria-hidden="true">Perbesar foto</span>
+              </button>
+              <figcaption class="caption">Foto: Kevin Zhang, via <a href="https://unsplash.com/photos/brown-mountain-under-white-clouds-during-daytime-dzFB8xeWg1M" target="_blank" rel="noopener">Unsplash</a></figcaption>
+            </figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="container colophon__inner">
+      <div>
+        <p class="colophon__title">Ngalam <span class="dot dot--on-dark" aria-hidden="true"></span></p>
+        <p class="colophon__credit colophon__credit--long">Dibuat oleh Faeyzar Ahnaf Musyarri, Departemen Teknik Informatika, Fakultas Teknologi Elektro dan Informatika Cerdas, Institut Teknologi Sepuluh Nopember, 2026.</p>
+        <p class="colophon__credit colophon__credit--short">Dibuat oleh Faeyzar Ahnaf Musyarri, Departemen Teknik Informatika ITS, 2026.</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Foto diperbesar" data-lightbox-dialog>
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Tutup foto"><span aria-hidden="true">×</span></button>
+    <div class="lightbox__stage" data-lightbox-stage></div>
+    <p class="lightbox__caption" data-lightbox-caption></p>
+  </dialog>
+</body>
+</html>
